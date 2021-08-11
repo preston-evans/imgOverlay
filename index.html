@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img Overlay</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .parent {
+            height: 100vh;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: cursive;
+            font-size: 6em;
+            font-weight: 100;
+            letter-spacing: .4em;
+        }
+
+        span {
+            font-weight: 900;
+            display: inline-block;
+            transform: scale(1.4)
+        }
+
+        .container {
+            width: 30%;
+            height: auto;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .overlay {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            background-color: rgb(117, 117, 117);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 3em;
+            opacity: 0;
+            cursor: pointer;
+            transition: opacity .2s ease-in;
+        }
+
+        .overlay:hover {
+            opacity: .95;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="container">
+            <img src="me.jpeg" alt="Preston Evans">
+            <div class="overlay">
+                <span>Check Me Out!!</span>
+            </div>
+        </div>
+        <h1>Preston <span>Jay</span> </h1>
+    </div>
+</body>
+
+</html>
